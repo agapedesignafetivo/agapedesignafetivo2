@@ -52,7 +52,9 @@
     }
 
     button {
-      padding: 20px; /* Maior padding para o botão circular */
+      width: 80px; /* Largura igual à altura para garantir que seja circular */
+      height: 80px; /* Altura igual à largura para garantir que seja circular */
+      padding: 0; /* Retirar padding para garantir que o botão seja perfeitamente circular */
       border: 2px solid red; /* Borda vermelha */
       border-radius: 50%; /* Botão redondo */
       font-size: 16px; /* Tamanho do texto */
@@ -61,8 +63,7 @@
       color: black; /* Texto preto */
       cursor: pointer;
       text-align: center;
-      width: 80px; /* Largura fixa para botões circulares */
-      height: 80px; /* Altura fixa para botões circulares */
+      line-height: 80px; /* Alinha o texto verticalmente no centro */
       outline: none; /* Remove borda extra de foco */
     }
 
@@ -81,8 +82,8 @@
   </div>
 
   <div id="buttons">
-    <button id="switchBtn">Trocar Câmera</button>
-    <button id="snapBtn">Tirar Foto</button>
+    <button id="switchBtn">Trocar</button>
+    <button id="snapBtn">Foto</button>
   </div>
 
   <a id="download" download="fotomoldurapersonalizada.png"></a>
@@ -180,7 +181,7 @@
       btx.drawImage(video, sx, sy, sw, sh, 0, 0, targetW, targetH);
       btx.restore();
 
-      // --- DESENHA O BUFFER NO CANVAS FINAL (NÃO É ESPELHADO) ---
+      // --- DESENHA O BUFFER NO CANVAS FINAL (NUNCA INVERTE) ---
       ctx.drawImage(buffer, 0, 0);
 
       // --- DESENHA A MOLDURA 100% NORMAL (NUNCA INVERTE) ---
