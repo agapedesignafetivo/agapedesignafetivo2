@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>Feito por Criis</title>
+  <title>Camera with Frame and Round Buttons</title>
 
   <style>
     html, body {
@@ -47,7 +47,7 @@
       width: 100%;
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 40px;
       z-index: 20;
     }
 
@@ -55,7 +55,6 @@
       width: 80px;
       height: 80px;
       padding: 0;
-      border: 2px solid red;
       background: white;
       color: black;
       cursor: pointer;
@@ -67,27 +66,9 @@
       font-weight: bold;
       text-align: center;
       outline: none;
-      border-radius: 50%;
+      border: 2px solid red;
+      border-radius: 50%; /* Tornando os botões circulares */
       transition: all 0.3s ease;
-    }
-
-    button::before,
-    button::after {
-      content: "";
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      background: white;
-      border-radius: 50%;
-      top: -40px;
-    }
-
-    button::before {
-      left: -40px;
-    }
-
-    button::after {
-      left: 40px;
     }
 
     button:hover {
@@ -105,7 +86,7 @@
   </div>
 
   <div id="buttons">
-    <!-- Botões com apenas emojis -->
+    <!-- Botões redondos com emojis -->
     <button id="switchBtn">🔄</button> <!-- Emoji de trocar câmera -->
     <button id="snapBtn">📸</button>  <!-- Emoji de foto -->
   </div>
