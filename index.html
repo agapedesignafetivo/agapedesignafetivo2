@@ -52,8 +52,8 @@
     }
 
     button {
-      width: 80px; /* Largura igual à altura para garantir que seja circular */
-      height: 80px; /* Altura igual à largura para garantir que seja circular */
+      width: 80px; /* Largura fixa para botões circulares */
+      height: 80px; /* Altura fixa para botões circulares */
       padding: 0; /* Retirar padding para garantir que o botão seja perfeitamente circular */
       border: 2px solid red; /* Borda vermelha */
       border-radius: 50%; /* Botão redondo */
@@ -63,7 +63,9 @@
       color: black; /* Texto preto */
       cursor: pointer;
       text-align: center;
-      line-height: 80px; /* Alinha o texto verticalmente no centro */
+      display: flex; /* Usar flexbox para centralizar o texto */
+      justify-content: center; /* Alinha o texto horizontalmente */
+      align-items: center; /* Alinha o texto verticalmente */
       outline: none; /* Remove borda extra de foco */
     }
 
